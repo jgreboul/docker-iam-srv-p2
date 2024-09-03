@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <!-- Service is logging ms in 3 digit format -->
+        <Property name="pattern">%highlight{[%d{yyyy-MM-dd HH:mm:ss.nnn}] %-5p [%tn] %c{1} - %m%n}{FATAL=red,
+            ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=blue}
+        </Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+    </Appenders>
+
+    <!-- https://logging.apache.org/log4j/2.x/manual/configuration.html#Additivity -->
+    <Loggers>
+        <Root level="info" additivity="false">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>
