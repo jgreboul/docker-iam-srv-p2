@@ -26,8 +26,8 @@ Here are the step-by-step instructions:
 ## Step 1: Download and Install all pre-requisites
 1. Docker: https://www.docker.com/products/docker-desktop/
 2. Github Desktop: https://github.com/apps/desktop
-3. IntelliJ Community Edition (or your preferred Integrated Development Environment (IDE))
-4. Postman
+3. IntelliJ IDEA: https://www.jetbrains.com/idea/download
+4. Postman: https://www.postman.com/downloads/ 
 
 ## Step 2: Clone this repository
 1. Open Github Desktop
@@ -76,8 +76,8 @@ Here are the step-by-step instructions:
               * service: mock unit tests for the PermissionService classe
               * util: include unit tests for the iamDBConnectorUtil class as well utility classes leveraged by the unit tests. 
 
-## Step 4: CLean, Compile, Verify and Package the iam.service application
-1. Open the docker-iam-srv-p2 project in your IDE (e.g.: IntelliJ)
+## Step 4: Compile the iam.service application
+1. Open the `docker-iam-srv-p2` project in your IDE (e.g.: IntelliJ)
 3. Identify the Java Maven build control panel in your IDE
 3. Perform a Clean build using Maven
 4. Perform a Compile build using Maven
@@ -115,7 +115,7 @@ Here are the step-by-step instructions:
 1. Open a terminal and navigate to the `docker-iam-srv-p2` directory.
 2. Run the following command to build the Docker image:
    `docker build -t docker-iam-srv-p2 .`
-3. Check the created image: docker image ls
+3. Check the created image: `docker image ls`
 4. Note the IMAGE ID
 
 ## Step 8: Run the IamService Container
@@ -123,7 +123,7 @@ Here are the step-by-step instructions:
    `docker run -d --name docker-iam-srv-p2 --network iam-service-network --env-file .env -p 8080:8080 docker-iam-srv-p2`
 
 ## Step 9: Verify the Container
-1. Check the status of the running container using the following command: docker ps -a
+1. Check the status of the running container using the following command: `docker ps -a`
 2. You should see the `docker-iam-srv-p2` listed among the running containers.
 3. Note the CONTAINER ID
 
@@ -131,15 +131,15 @@ Here are the step-by-step instructions:
 1. Open your browser and navigate to the following url: `http://localhost:8080/`
 2. Validate you're getting the following response: `"{"status":"NOT_FOUND","response":"content-not-found","count":0}"`
 3. Open Postman
-4. Import the postman collection 'IAM Service (part 2).postman_collection.json'
+4. Import the postman collection `IAM Service (part 2).postman_collection.json`
 5. Try the different APIs
 6. Don't forget to delete any created Permission or Metadata.
 
 ## Step 11: Clean-up!
-1. Kill your running docker: docker kill <CONTAINER ID>
-2. Remove the container: docker rm <CONTAINER ID>
-3. Remove the image: docker rmi <IMAGE ID>
-4. Remove the network: docker network rm  <NETWORK ID>
+1. Kill your running docker: `docker kill CONTAINER ID`
+2. Remove the container: `docker rm CONTAINER ID`
+3. Remove the image: `docker rmi IMAGE ID`
+4. Remove the network: `docker network rm  NETWORK ID`
 
 For more insights, subscribe to my Youtube Channel: https://www.youtube.com/user/jgreboul
 Thank you,
