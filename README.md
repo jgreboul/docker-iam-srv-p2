@@ -141,6 +141,12 @@ Here are the step-by-step instructions:
 3. Remove the image: `docker rmi IMAGE ID`
 4. Remove the network: `docker network rm  NETWORK ID`
 
+## Detailed Documentation
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/jgreboul/docker-iam-srv-p2)
+
+## Contact Information
+
 For more insights, subscribe to my Youtube Channel: https://www.youtube.com/user/jgreboul
 Thank you,
 Jean-Gael Reboul
